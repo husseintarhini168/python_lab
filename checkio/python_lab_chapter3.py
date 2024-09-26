@@ -1,4 +1,4 @@
-#ex 1  Count Vowels
+"""#ex 1  Count Vowels
 def count_vowels(text: str) -> int:
     text = text.lower()  
     vowels = "aeiou" 
@@ -48,4 +48,22 @@ assert sum_upto_n(100) == 5050
 assert sum_upto_n(200) == 20100
 assert sum_upto_n(500) == 125250
 
-print("The mission is done! Click 'Check Solution' to earn rewards!")
+print("The mission is done! Click 'Check Solution' to earn rewards!")"""
+
+# ex 1 Count Vowels
+def count_vowels(text: str) -> int:
+    text = text.lower()  
+    vowels = "aeiou" 
+    count = 0
+    for char in text:
+        if char in vowels:  
+            count += 1
+    return count
+
+
+# ex 2 Sum of Integers
+def sum_upto_n(N: int) -> int:
+    total_sum = 0
+    for i in range(N + 1):
+        total_sum += i
+    return total_sum

@@ -1,4 +1,45 @@
-#exercise 1 Variable: Declaration and Value Setting
+# exercise 1 Variable: Declaration and Value Setting
+a = 2
+b = 5
+a, b = 2, 5
+a: int = 2
+b: int = 5
+
+# ex 2 Variables with Expression Values
+add = a + b
+multi = a * b
+
+
+def func():
+    pass
+
+
+def func():
+    return None
+
+
+# ex 3 Take and Return Argument
+def func(arg):
+    return arg
+
+
+# ex 4 Multiply (Intro)
+def mult_two(a: int, b: int) -> int:
+    multi = a * b
+    return multi
+
+
+# ex 5 Rectangle Perimeter
+def rectangle_perimeter(length: int, width: int) -> int:
+    p = 2 * length + 2 * width
+    return p
+
+
+
+
+
+
+"""#exercise 1 Variable: Declaration and Value Setting
 a = 2
 b = 5
 a, b = 2, 5
@@ -67,7 +108,12 @@ assert rectangle_perimeter(4, 1) == 10
 assert rectangle_perimeter(100, 100) == 400
 assert rectangle_perimeter(0.5, 2) == 5
 
-print("The mission is done! Click 'Check Solution' to earn rewards!")
+print("The mission is done! Click 'Check Solution' to earn rewards!")"""
+
+
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-#ex Convert To Title Case
+"""#ex Convert To Title Case
 def to_title_case(sentence: str) -> str:
     words = sentence.split(" ")  
     title_cased = map(str.capitalize, words) 
@@ -20,4 +20,11 @@ assert to_title_case("to be or not to be") == "To Be Or Not To Be"
 assert to_title_case("that is the question") == "That Is The Question"
 assert to_title_case("") == ""
 
-print("The mission is done! Click 'Check Solution' to earn rewards!")
+print("The mission is done! Click 'Check Solution' to earn rewards!")"""
+
+# ex Convert To Title Case
+def to_title_case(sentence: str) -> str:
+    words = sentence.split(" ")  
+    title_cased = map(str.capitalize, words) 
+    return " ".join(title_cased)
+
