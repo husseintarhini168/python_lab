@@ -1,0 +1,51 @@
+name: Python Poetry CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Set up Python (adjust version as necessary)
+      - name: Set up Python 3.9
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+
+      # Install Poetry
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+          echo "POETRY_HOME=$HOME/.local/bin" >> $GITHUB_ENV
+
+      # Cache Poetry dependencies
+      - name: Cache Poetry dependencies
+        uses: actions/cache@v3
+        with:
+          path: |
+            ~/.cache/pypoetry
+            ~/.local/share/virtualenvs
+          key: ${{ runner.os }}-poetry-${{ hashFiles('**/poetry.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-poetry-
+
+      # Install dependencies
+      - name: Install dependencies
+        run: |
+          $HOME/.local/bin/poetry install
+
+      # Run your tests or linting (adjust commands as necessary)
+      - name: Run tests
+        run: |
+          $HOME/.local/bin/poetry run pytest  # Replace with your test/linting command
