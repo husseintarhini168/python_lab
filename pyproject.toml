@@ -8,10 +8,12 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.12"
 pytest = "^8.3.3"
+pylint = "^3.3.1"
 
 [tool.poetry.group.dev.dependencies]
 coverage-badge = "^1.1.2"
 pylint = "^3.3.1"
+sphinx = "^8.0.2"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
