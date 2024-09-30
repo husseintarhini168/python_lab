@@ -91,4 +91,4 @@ jobs:
         run: poetry install
 
       - name: Run pylint
-        run: pwd ; poetry run pylint checkio/multiply_intro.py
+        run: pwd ; poetry run pylint tests
