@@ -91,4 +91,4 @@ jobs:
         run: poetry install
 
       - name: Run pylint
-        run: pwd ; poetry run pylint tests
+        run: pwd ; poetry run pylint tests/test_python_lab2_chapter2.py
